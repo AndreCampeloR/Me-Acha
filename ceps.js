@@ -10,18 +10,17 @@ window.onload = function(){
 		var consultaCep = await fetch(url);
 		var dadoCep = await consultaCep.json();
 
-		for(var campelo in dadoCep){
-
-			if(document.querySelector("#"+campelo)){
-			document.querySelector("#"+campelo).value = dadoCep[campelo];
-
-				if((document.querySelector("#logradouro").value)==""){
-					document.querySelector("#logradouro").value="Rua não encontrada"
-				}
-				if((document.querySelector("#bairro").value)==""){
-					document.querySelector("#bairro").value="Bairro não encontrado"
-				}
-				if((document.querySelector("#localidade").value)==""){
+			for(var campelo in dadoCep){
+				if(document.querySelector("#"+campelo)){
+					document.querySelector("#"+campelo).value = dadoCep[campelo];
+					
+					if((document.querySelector("#logradouro").value)==""){
+						document.querySelector("#logradouro").value="Rua não encontrada"
+					}
+					if((document.querySelector("#bairro").value)==""){
+						document.querySelector("#bairro").value="Bairro não encontrado"
+					}
+					if((document.querySelector("#localidade").value)==""){
 					document.querySelector("#localidade").value="Cidade não encontrada"
 				}
 				if((document.querySelector("#uf").value)==""){
@@ -29,11 +28,13 @@ window.onload = function(){
 				}
 			}
 		}
-	} catch{
+	}
+					
+	 catch{
 		alert("Esse Cep não existe");
 		
 	}
-	}
+}
 
 	btnBuscaCep.addEventListener("click",()=>{
 		
