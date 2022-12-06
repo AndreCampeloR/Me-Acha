@@ -3,7 +3,6 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
 header{
 	position: absolute;
 	z-index: 0;
@@ -12,10 +11,9 @@ header{
 	display: flex;
 	flex-direction: column;
 	border-bottom: 4px solid #fff;
-	background: rgb(22,77,251);
-	background: linear-gradient(180deg, rgba(22,77,251,1) 0%, rgba(105,187,255,1) 100%);
+	background: rgb(247, 113, 3);
+	background: linear-gradient(180deg, rgba(247,113,3,1) 0%, rgb(255, 178, 105) 100%);
 }
-
 header > h1{
 	padding: 5px;
 	color: #fff;
@@ -23,7 +21,6 @@ header > h1{
 	font-family: verdana, arial, cursive;
 	margin-top: 40px;
 }
-
 header > h2{
 	color: #fff;
 	width: 100%;
@@ -32,7 +29,6 @@ header > h2{
 	font-size: 14px;
 	text-align: center;
 }
-
 main{
 	position: absolute;
 	z-index: 100;
@@ -40,57 +36,46 @@ main{
 	height: auto;
 	top: 230px;
 }
-
 #conteudo-geral{
 	width: 80%;
 	margin: 0 auto;
 	flex-direction: column;
 }
-
 .box-custom{
 	width: 100%;
 	height: auto;
 }
-
 a{
 	text-decoration: none;
 	color: #000;
 }
-
 form{
 	width: 400px;
 	height: auto;
 	padding: 10px;
 }
-
 .flex{
 	display: flex;
 }
-
 .justify-content{
 	justify-content: center;
 }
-
 .display-btn{
 	width: 100%;
 	height: auto;
 	padding: 4px;
 }
-
 .btn{
 	padding: 8px;
 	width: 100%;
 	border: none;
-	border-bottom: 5px solid #007ae0;
-	border-radius: 5px;
-	background: #2196f8;
+	border-bottom: 5px solid #fc7201;
+	background: #ff933b;
 	color: #fff;
 }
-
 .btn:hover{
 	cursor: pointer;
 }
-
 form > label{
 	width: 100%;
 	height: auto;
@@ -99,12 +84,10 @@ form > label{
 	flex-direction: column;
 	font-family: verdana, cursive;
 }
-
 form > label > input[type=text]{
 	font-size: 14px;
 	padding: 4px;
 }
-
 #logo-principal{
 	width: 100px;
 	height: 100px;
@@ -112,11 +95,9 @@ form > label > input[type=text]{
 	background: #fff;
 	align-items: center;
 }
-
 #logo-principal .logo{
 	font-size: 85px;
 }
-
 #content-base{
 	width: 100%;
 	height: auto;
