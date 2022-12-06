@@ -1,18 +1,18 @@
 window.onload = function(){
-
+	
 	const btnBuscaCep = document.querySelector("#btnBuscaCep");
 	const cxCep = document.querySelector(".cxCep");
-
+	
 	const dadosCep = async function(cepUrl){
 
-	try{
-
+		try{
+			
 		var url=`https://viacep.com.br/ws/${cepUrl}/json/`;
 		var consultaCep = await fetch(url);
 		var dadoCep = await consultaCep.json();
 
-			for(var campos in dadoCep){
-				if(document.querySelector("#"+campos)){
+		for(var campos in dadoCep){
+			if(document.querySelector("#"+campos)){
 					document.querySelector("#"+campos).value = dadoCep[campos];
 					
 					if((document.querySelector("#logradouro").value)==""){
@@ -34,23 +34,33 @@ window.onload = function(){
 						document.querySelector("#uf").value = ""
 						alert("Esse Cep não existe");
 					}
-			    }
-
-		    }
-
-	}
 					
-	 catch{
-		alert("Esse não é um Cep válido");
+			    }
+				
+		    }
+			
+		}
+		
+		catch{
+			alert("Esse não é um Cep válido");
+			
+		}
 		
 	}
-
-}
-
+	
 	btnBuscaCep.addEventListener("click",()=>{
 		
 		let cep = cxCep.value;
 		dadosCep(cep);
-
+		
 	})
+
+	const checkbox = document.querySelector("#checkbox");
+
+	 checkbox.addEventListener('change', ()=>{
+	 document.body.classList.toggle('dark');
+	});
 }
+
+
+
